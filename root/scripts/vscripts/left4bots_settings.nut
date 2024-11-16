@@ -13,7 +13,7 @@
 	automation_debug = 0
 
 	// [1/0] 1 = Once the bots reach the end saferoom, a wait inside the saferoom order is automatically given to all the bots (useful in Tank Run mutation)
-	automation_stay_in_end_saferoom = 0
+	automation_stay_in_end_saferoom = 1
 
 	// Interval of the main bot Think function (default is 0.1 which means 10 ticks per second)
 	// Set the max i can get even though the think functions can go up to 30 ticks per second (interval 0.0333) and the CTerrorPlayer entities limit their think functions to max 15 ticks per second (0.06666)
@@ -21,7 +21,7 @@
 	bot_think_interval = -1
 
 	// [1/0] Enable/Disable debug chat messages when the bot picks-up/drops the assigned carry item
-	carry_debug = 0
+	carry_debug = 1
 
 	// Chance that the bot will chat one of the BG lines at the end of the campaign (if dead or incapped)
 	chat_bg_chance = 50
@@ -67,7 +67,7 @@
 	damage_barricade = 1
 	
 	// [1/0] Enable/Disable bots being able to ignite gascans and other items
-	damage_other = 0
+	damage_other = 1
 
 	// Dead survivors to defib must be within this radius
 	deads_scan_radius = 1200
@@ -142,19 +142,19 @@
 	follow_pause_radius = 220
 
 	// [1/0] Should the bots give their medkits/defibrillators to human players?
-	give_bots_medkits = 1
+	give_bots_medkits = 0
 
 	// [1/0] Should the bots give their pills/adrenaline to human players?
 	give_bots_pills = 1
 
 	// [1/0] Should the bots give their throwables to human players?
-	give_bots_nades = 1
+	give_bots_nades = 0
 
 	// [1/0] Should the bots give their upgrade packs to human players?
 	give_bots_upgrades = 1
 	
 	// [1/0] Should the bots give their weapons to human players?
-	give_bots_weapons = 1
+	give_bots_weapons = 0
 
 	// [1/0] Can the human survivors give their pills/adrenaline to other survivors (and swap with bots)?
 	give_humans_meds = 1
@@ -246,14 +246,14 @@
 	loglevel = 3
 
 	// [1/0] Enable/Disable the vscripted manual attack while not executing any MOVE command. 0 = Manual attack only while executing MOVE commands, 1 = Always
-	manual_attack_always = 0
+	manual_attack_always = 1
 
 	// [0.0 - 1.0] While executing MOVE commands (or always if manual_attack_always = 1), this is how straight the bot should be looking at the enemy in order to shoot it
 	// 0.0 (or -1) = Even the enemies behind will be shoot (CSGO spinbot style)
 	// 0.6 Kill everything in sight
 	// 0.99 Almost never actively looking for new targets
 	// 1.0 = The bot will probably never shoot
-	manual_attack_mindot = 0.94
+	manual_attack_mindot = -1
 
 	// While executing MOVE commands (or always if manual_attack_always = 1), this is the max distance of the enemies that the bot will shoot
 	manual_attack_radius = 950
@@ -262,7 +262,7 @@
 	// 1: Aim & Shoot infected body (few skeeting hunter) & limit dual pistol dps to vanilla level (no more machine pistol)
 	// 2: + shoot head
 	// 3: + max dps + kill wandering infected
-	manual_attack_skill = 1
+	manual_attack_skill = 2
 
 	// Maximum distance from a generic destination position for setting the travel done
 	move_end_radius = 30
